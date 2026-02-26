@@ -1,0 +1,139 @@
+[2026-02-26 18:30:32 UTC] vlib work && vlog '-timescale' '1ns/1ns' +incdir+$RIVIERA_HOME/vlib/uvm-1.2/src -l uvm_1_2 -err VCP2947 W9 -err VCP2974 W9 -err VCP3003 W9 -err VCP5417 W9 -err VCP6120 W9 -err VCP7862 W9 -err VCP2129 W9 design.sv testbench.sv  && vsim -c -do "vsim +access+r; run -all; exit"  
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = ./work/work.lib
+MESSAGE_SP VCP2124 "Package uvm_pkg found in library uvm_1_2."
+MESSAGE "Unit top modules: tb."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 6[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2025.04.139.9738 built for Linux64 on May 30, 2025.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2025 Aldec, Inc. All rights reserved.
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "uvm_pkg" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.6 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Info: Loading library:  /usr/share/Riviera-PRO/bin/uvm_1_2_dpi
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 6 (42.86%) other processes in SLP
+# SLP: 25 (0.08%) signals in SLP and 73 (0.24%) interface signals
+# ELAB2: Elaboration final pass complete - time: 2.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 28632 kB (elbread=2090 elab2=21795 kernel=4746 sdf=0)
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: UVM-1.2
+# KERNEL: (C) 2007-2014 Mentor Graphics Corporation
+# KERNEL: (C) 2007-2014 Cadence Design Systems, Inc.
+# KERNEL: (C) 2006-2014 Synopsys, Inc.
+# KERNEL: (C) 2011-2013 Cypress Semiconductor Corp.
+# KERNEL: (C) 2013-2014 NVIDIA Corporation
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: 
+# KERNEL:   ***********       IMPORTANT RELEASE NOTES         ************
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_NO_DEPRECATED undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# KERNEL: 
+# KERNEL:       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# KERNEL: 
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test test...
+# KERNEL: [0] [FIFO] wr_en=x din=0xxxxx rd_en=x dout=0xxxxx empty=x full=x
+# KERNEL: [10] [FIFO] wr_en=0 din=0x0 rd_en=0 dout=0xxxxx empty=1 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(78) @ 90: uvm_test_top.env.agt.drv [drv] Reset asserted.
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 90: uvm_test_top.env.agt.sqr@@gen [gen] Write tx with din: 47496
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 110: uvm_test_top.env.agt.drv [drv] wr_en: 1, rd_en: 0, din: 47496
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 110: uvm_test_top.env.agt.sqr@@gen [gen] Write tx with din: 40949
+# KERNEL: [110] [FIFO] wr_en=1 din=0xb988 rd_en=0 dout=0xxxxx empty=1 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(167) @ 130: uvm_test_top.env.scb [scb] Written data: 47496
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 130: uvm_test_top.env.agt.drv [drv] wr_en: 1, rd_en: 0, din: 40949
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 130: uvm_test_top.env.agt.sqr@@gen [gen] Write tx with din: 27855
+# KERNEL: [130] [FIFO] wr_en=1 din=0x9ff5 rd_en=0 dout=0xxxxx empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(167) @ 150: uvm_test_top.env.scb [scb] Written data: 40949
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 150: uvm_test_top.env.agt.drv [drv] wr_en: 1, rd_en: 0, din: 27855
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 150: uvm_test_top.env.agt.sqr@@gen [gen] Write tx with din: 8214
+# KERNEL: [150] [FIFO] wr_en=1 din=0x6ccf rd_en=0 dout=0xxxxx empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(167) @ 170: uvm_test_top.env.scb [scb] Written data: 27855
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 170: uvm_test_top.env.agt.drv [drv] wr_en: 1, rd_en: 0, din: 8214
+# KERNEL: UVM_INFO /home/runner/testbench.sv(39) @ 170: uvm_test_top.env.agt.sqr@@gen [gen] Write tx with din: 47562
+# KERNEL: [170] [FIFO] wr_en=1 din=0x2016 rd_en=0 dout=0xxxxx empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(167) @ 190: uvm_test_top.env.scb [scb] Written data: 8214
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 190: uvm_test_top.env.agt.drv [drv] wr_en: 1, rd_en: 0, din: 47562
+# KERNEL: UVM_INFO /home/runner/testbench.sv(47) @ 190: uvm_test_top.env.agt.sqr@@gen [gen] Read tx
+# KERNEL: [190] [FIFO] wr_en=1 din=0xb9ca rd_en=0 dout=0xxxxx empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(167) @ 210: uvm_test_top.env.scb [scb] Written data: 47562
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 210: uvm_test_top.env.agt.drv [drv] wr_en: 0, rd_en: 1, din: 14827
+# KERNEL: UVM_INFO /home/runner/testbench.sv(47) @ 210: uvm_test_top.env.agt.sqr@@gen [gen] Read tx
+# KERNEL: [210] [FIFO] wr_en=0 din=0x39eb rd_en=1 dout=0xxxxx empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 230: uvm_test_top.env.agt.drv [drv] wr_en: 0, rd_en: 1, din: 41081
+# KERNEL: UVM_INFO /home/runner/testbench.sv(47) @ 230: uvm_test_top.env.agt.sqr@@gen [gen] Read tx
+# KERNEL: [230] [FIFO] wr_en=0 din=0xa079 rd_en=1 dout=0xb988 empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(178) @ 250: uvm_test_top.env.scb [scb] Read data: 47496
+# KERNEL: UVM_INFO /home/runner/testbench.sv(189) @ 250: uvm_test_top.env.scb [scb] Matched wr and rd data:
+# KERNEL: UVM_INFO /home/runner/testbench.sv(190) @ 250: uvm_test_top.env.scb [scb] Read data: 47496, Expected data: 47496
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 250: uvm_test_top.env.agt.drv [drv] wr_en: 0, rd_en: 1, din: 60788
+# KERNEL: UVM_INFO /home/runner/testbench.sv(47) @ 250: uvm_test_top.env.agt.sqr@@gen [gen] Read tx
+# KERNEL: [250] [FIFO] wr_en=0 din=0xed74 rd_en=1 dout=0x9ff5 empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(178) @ 270: uvm_test_top.env.scb [scb] Read data: 40949
+# KERNEL: UVM_INFO /home/runner/testbench.sv(189) @ 270: uvm_test_top.env.scb [scb] Matched wr and rd data:
+# KERNEL: UVM_INFO /home/runner/testbench.sv(190) @ 270: uvm_test_top.env.scb [scb] Read data: 40949, Expected data: 40949
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 270: uvm_test_top.env.agt.drv [drv] wr_en: 0, rd_en: 1, din: 8412
+# KERNEL: UVM_INFO /home/runner/testbench.sv(47) @ 270: uvm_test_top.env.agt.sqr@@gen [gen] Read tx
+# KERNEL: [270] [FIFO] wr_en=0 din=0x20dc rd_en=1 dout=0x6ccf empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(178) @ 290: uvm_test_top.env.scb [scb] Read data: 27855
+# KERNEL: UVM_INFO /home/runner/testbench.sv(189) @ 290: uvm_test_top.env.scb [scb] Matched wr and rd data:
+# KERNEL: UVM_INFO /home/runner/testbench.sv(190) @ 290: uvm_test_top.env.scb [scb] Read data: 27855, Expected data: 27855
+# KERNEL: UVM_INFO /home/runner/testbench.sv(90) @ 290: uvm_test_top.env.agt.drv [drv] wr_en: 0, rd_en: 1, din: 15025
+# KERNEL: [290] [FIFO] wr_en=0 din=0x3ab1 rd_en=1 dout=0x2016 empty=0 full=0
+# KERNEL: UVM_INFO /home/runner/testbench.sv(178) @ 310: uvm_test_top.env.scb [scb] Read data: 8214
+# KERNEL: UVM_INFO /home/runner/testbench.sv(189) @ 310: uvm_test_top.env.scb [scb] Matched wr and rd data:
+# KERNEL: UVM_INFO /home/runner/testbench.sv(190) @ 310: uvm_test_top.env.scb [scb] Read data: 8214, Expected data: 8214
+# KERNEL: [310] [FIFO] wr_en=0 din=0x3ab1 rd_en=1 dout=0xb9ca empty=1 full=0
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_objection.svh(1271) @ 1290: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO ./uvm-1.2/src/base/uvm_report_server.svh(869) @ 1290: reporter [UVM/REPORT/SERVER] 
+# KERNEL: --- UVM Report Summary ---
+# KERNEL: 
+# KERNEL: ** Report counts by severity
+# KERNEL: UVM_INFO :   41
+# KERNEL: UVM_WARNING :    0
+# KERNEL: UVM_ERROR :    0
+# KERNEL: UVM_FATAL :    0
+# KERNEL: ** Report counts by id
+# KERNEL: [RNTST]     1
+# KERNEL: [TEST_DONE]     1
+# KERNEL: [UVM/RELNOTES]     1
+# KERNEL: [drv]    11
+# KERNEL: [gen]    10
+# KERNEL: [scb]    17
+# KERNEL: 
+# RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
+# KERNEL: Time: 1290 ns,  Iteration: 57,  Instance: /tb,  Process: @INITIAL#298_2@.
+# KERNEL: stopped at time: 1290 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Finding VCD file...
+./dump.vcd
+[2026-02-26 18:30:44 UTC] Opening EPWave...
+Done
