@@ -1,0 +1,142 @@
+[2026-03-07 20:25:52 UTC] vlib work && vlog '-timescale' '1ns/1ns' +incdir+$RIVIERA_HOME/vlib/uvm-1.2/src -l uvm_1_2 -err VCP2947 W9 -err VCP2974 W9 -err VCP3003 W9 -err VCP5417 W9 -err VCP6120 W9 -err VCP7862 W9 -err VCP2129 W9 design.sv testbench.sv  && vsim -c -do "vsim +access+r; run -all; exit"  
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = ./work/work.lib
+MESSAGE "Unit top modules: tb."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2025.04.139.9738 built for Linux64 on May 30, 2025.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2025 Aldec, Inc. All rights reserved.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 5 (62.50%) other processes in SLP
+# SLP: 11 (3.19%) signals in SLP and 17 (4.93%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=459 elab2=4265 kernel=37 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: [DRV] Reset asserted
+# KERNEL: [DRV] Data Write: 0x85
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0x85 data_out:0xxx full:0 empty:1
+# KERNEL: [SCO] : Data stored in queue :0x85, queue size: 1
+# KERNEL: [DRV] Data Write: 0x80
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0x80 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0x80, queue size: 2
+# KERNEL: [DRV] Data Write: 0xc8
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xc8 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xc8, queue size: 3
+# KERNEL: [DRV] Data Write: 0xa5
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xa5 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xa5, queue size: 4
+# KERNEL: [DRV] Data Write: 0xd6
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xd6 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xd6, queue size: 5
+# KERNEL: [DRV] Data Write: 0xcd
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xcd data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xcd, queue size: 6
+# KERNEL: [DRV] Data Write: 0xf0
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xf0 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xf0, queue size: 7
+# KERNEL: [DRV] Data Write: 0x70
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0x70 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0x70, queue size: 8
+# KERNEL: [DRV] Data Write: 0x0f
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0x0f data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0x0f, queue size: 9
+# KERNEL: [DRV] Data Write: 0x87
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0x87 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0x87, queue size: 10
+# KERNEL: [DRV] Data Write: 0x3b
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0x3b data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0x3b, queue size: 11
+# KERNEL: [DRV] Data Write: 0xb6
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xb6 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xb6, queue size: 12
+# KERNEL: [DRV] Data Write: 0xb5
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xb5 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xb5, queue size: 13
+# KERNEL: [DRV] Data Write: 0xe3
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xe3 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xe3, queue size: 14
+# KERNEL: [DRV] Data Write: 0x8f
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0x8f data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0x8f, queue size: 15
+# KERNEL: [DRV] Data Write: 0xb9
+# KERNEL: [MON] : wr_en:1 rd_en:0 data_in:0xb9 data_out:0xxx full:0 empty:0
+# KERNEL: [SCO] : Data stored in queue :0xb9, queue size: 16
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0x85 full:1 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0x80 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xc8 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xa5 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xd6 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xcd full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xf0 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0x70 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0x0f full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0x87 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0x3b full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xb6 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xb5 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xe3 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0x8f full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: [DRV] Data Read
+# KERNEL: [MON] : wr_en:0 rd_en:1 data_in:0xb9 data_out:0xb9 full:0 empty:0
+# KERNEL: [SCO] : Data matched
+# KERNEL: Test Passed!
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (220): $finish called.
+# KERNEL: Time: 2030 ns,  Iteration: 1,  Instance: /tb,  Process: @INITIAL#253_2@.
+# KERNEL: stopped at time: 2030 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Finding VCD file...
+./waveform.vcd
+[2026-03-07 20:25:54 UTC] Opening EPWave...
