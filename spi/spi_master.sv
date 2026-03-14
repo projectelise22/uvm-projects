@@ -74,4 +74,18 @@ interface spi_if;
   logic sclk;
   logic cs;
   logic mosi;
+  logic [11:0] dout;
+  logic done;
+
+  clocking cb_drv @(posedge sclk);
+    output newd, din;
+    input cs, mosi;
+  endclocking
+
+  clocking cb_mon @(posedge sclk);
+    input newd, din, cs, mosi;
+  endclocking
+
+  modport drv (clocking cb_drv, input clk, rst);
+  modport mon (clocking cb_mon, input clk, rst);
 endinterface
