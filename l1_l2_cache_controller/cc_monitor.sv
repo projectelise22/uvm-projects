@@ -16,7 +16,7 @@ class cc_monitor extends uvm_monitor;
     super.build_phase(phase);
     
     if(!uvm_config_db#(cc_vif)::get(this, "", "vif", vif))
-      `uvm_fatal("TB_ISSUE", "Failure to get virtual interface in monitor");
+      `uvm_fatal("MON", "Failure to get virtual interface in monitor");
     
     port = new("port", this);
   endfunction
@@ -49,7 +49,7 @@ class cc_monitor extends uvm_monitor;
       tr.hit  = vif.hit;
       tr.miss = vif.miss;
       
-      `uvm_info("DEBUG", $sformatf("%0s", tr.convert2string()), UVM_LOW);
+      `uvm_info("MON", $sformatf("%0s", tr.convert2string()), UVM_LOW);
     port.write(tr);
     end
   

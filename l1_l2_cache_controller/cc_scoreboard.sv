@@ -38,22 +38,22 @@
           cache_model[index].valid = 1'b1;
           cache_model[index].tag = addr_tag;
           cache_model[index].data = tr.data;
-          `uvm_info("DEBUG", $sformatf("Write recorded, %0s", tr.convert2string()), UVM_LOW);
+          `uvm_info("SCB", $sformatf("Write recorded, %0s", tr.convert2string()), UVM_LOW);
         end
         
         CC_READ: begin
           // address hit check
           if( expect_hit ) begin
             if( tr.hit !== 1'b1 ) begin
-              `uvm_error("DUT_ERROR", "Expecting hit but got MISS");
+              `uvm_error("SCB", "Expecting hit but got MISS");
               fail_count++;
             end else begin
               // data check
               if( tr.data !== cache_model[index].data ) begin
-                `uvm_error("DUT_ERROR", $sformatf("Read data not equal to expected data! %0s, expected: %0h", tr.convert2string(), cache_model[index].data));
+                `uvm_error("SCB", $sformatf("Read data not equal to expected data! %0s, expected: %0h", tr.convert2string(), cache_model[index].data));
                 fail_count++;
               end else begin
-                `uvm_info("TEST PASS", $sformatf("%0s, expected: %0h", tr.convert2string(), cache_model[index].data), UVM_LOW);
+                `uvm_info("SCB", $sformatf("%0s, expected: %0h", tr.convert2string(), cache_model[index].data), UVM_LOW);
                 pass_count++;
               end
             end
@@ -61,10 +61,10 @@
           // never written in this address
           end else begin
             if( tr.miss !== 1'b1 ) begin
-              `uvm_error("DUT_ERROR", "Address was not written before but got HIT");
+              `uvm_error("SCB", "Address was not written before but got HIT");
               fail_count++;
             end else begin
-              `uvm_info("TEST PASS", "Address was not written before and got MISS", UVM_LOW);
+              `uvm_info("SCB", "Address was not written before and got MISS", UVM_LOW);
               pass_count++;
             end
           end
@@ -72,11 +72,23 @@
         
       endcase
     endfunction
+ 
+    virtual function void reset_model();
+      for(int i=0; i<`CACHE_SLOT; i++) begin
+        cache_model[i].valid = 1'b0;
+        cache_model[i].tag   = '0;
+        cache_model[i].data  = '0;
+      end
+      `uvm_info("SCB", "Scoreboard model reset", UVM_LOW)
+    endfunction
     
     virtual function void report_phase(uvm_phase phase);
       super.report_phase(phase);
       
-      `uvm_info("INFO", $sformatf("SCOREBOARD SUMMARY: PASS=%0d FAIL=%0d", pass_count, fail_count), UVM_NONE);
+      `uvm_info("SCB", "----------------------------------------", UVM_NONE)
+      `uvm_info("SCB", $sformatf("  PASS: %0d", pass_count), UVM_NONE)
+      `uvm_info("SCB", $sformatf("  FAIL: %0d", fail_count), UVM_NONE)
+      `uvm_info("SCB", "----------------------------------------", UVM_NONE)
     endfunction
   endclass
 `endif

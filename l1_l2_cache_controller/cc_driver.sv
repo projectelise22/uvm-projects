@@ -14,7 +14,7 @@
     virtual function void build_phase(uvm_phase phase);
       super.build_phase(phase);
       if(!uvm_config_db#(cc_vif)::get(this, "", "vif", vif))
-        `uvm_fatal("TB ISSUE", "Failure to get virtual interface in driver");
+        `uvm_fatal("DRV", "Failure to get virtual interface in driver");
     endfunction
     
     virtual task run_phase(uvm_phase phase);
@@ -43,7 +43,7 @@
           @(posedge vif.clk);
           vif.wr_en <= 1'b0;
           
-          `uvm_info("DEBUG", $sformatf("%0s", tr.convert2string()), UVM_LOW);
+          `uvm_info("DRV", $sformatf("%0s", tr.convert2string()), UVM_LOW);
         end
         
         CC_READ: begin
@@ -54,7 +54,7 @@
           @(posedge vif.clk);
           vif.rd_en <= 1'b0;
           
-          `uvm_info("DEBUG", $sformatf("%0s", tr.convert2string()), UVM_LOW);
+          `uvm_info("DRV", $sformatf("%0s", tr.convert2string()), UVM_LOW);
         end
         
       endcase
