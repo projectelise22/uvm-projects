@@ -15,14 +15,21 @@
 
     `include "cc_sequence_item.sv"
     `include "cc_base_sequence.sv"
+    `include "cc_eviction_sequence.sv"
+    `include "cc_write_hit_sequence.sv"
+    `include "cc_all_slots_sequence.sv"
 
     `include "cc_driver.sv"
     `include "cc_monitor.sv"
+    `include "cc_coverage.sv"
     `include "cc_agent.sv"
     `include "cc_scoreboard.sv"
     `include "cc_environment.sv"
 
     `include "cc_base_test.sv"
+    `include "cc_eviction_test.sv"
+    `include "cc_write_hit_test.sv"
+    `include "cc_all_tests.sv"
   
   endpackage
 `endif
